@@ -13,7 +13,7 @@ exports.config = {
       email: 'default',
       password: 'default',
       sendtoemail: 'default',
-      cmsub: 'default'
+      cmsub: 'test'
     }
   },
 };
