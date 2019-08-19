@@ -12,6 +12,7 @@
 1)Clone this repo and go to Protractor_TC_email-01 dir
 
 2)Replace xxx and yyy with corresponding values before running the command
+
     protractor config.js \
     --params.login.email='xxx@gmail.com' \
     --params.login.password='yyy' \
