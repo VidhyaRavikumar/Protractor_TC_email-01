@@ -1,18 +1,26 @@
-//Suite in Jasmine
-describe('angularjs homepage todo list', function() { 
-  // Test in Jasmine
-  it('should add a todo', function() { 
-    // Entering application url in browser
-    browser.get('https://angularjs.org');
-    // Enter text under TODO input field
-    element(by.model('todoList.todoText')).sendKeys('write first protractor test');
-    // Clicks on 'Add' button
-    element(by.css('[value="add"]')).click(); 
-    // Getting all Todo lists displayed
-    var todoList = element.all(by.repeater('todo in todoList.todos'));
-    // Asserting the TODO's count as 3
-    expect(todoList.count()).toEqual(3);
-    //Verifying newly entered TODO is added
-    expect(todoList.get(2).getText()).toEqual('write first protractor test');
-  });
+describe('Gmail', function() {
+beforeEach(function(){
+browser.driver.ignoreSynchronization = true;
+
 });
+it('NavGmail', function() {
+browser.driver.get('http://gmail.com');
+browser.driver.findElement(by.id('identifierId')).sendKeys(browser.params.login.email);
+browser.driver.findElement(by.id('identifierNext')).click(); 
+browser.driver.sleep(5000);
+browser.driver.findElement(by.xpath("//input[@type='password']")).sendKeys(browser.params.login.password);
+browser.driver.findElement(by.id('passwordNext')).click(); 
+browser.driver.sleep(5000);
+browser.driver.get('https://mail.google.com/mail/u/0/#inbox?compose=new')
+browser.driver.sleep(5000);
+browser.driver.findElement(by.xpath("//textarea[@name='to']")).sendKeys(browser.params.login.sendtoemail);
+browser.driver.findElement(by.xpath("//input[@name='subjectbox']")).sendKeys(browser.params.login.cmsub);
+browser.driver.sleep(5000);
+browser.driver.findElement(by.xpath("//div[@class='T-I J-J5-Ji aoO v7 T-I-atl L3']")).click();
+browser.driver.get('https://mail.google.com/mail/u/0/#sent')
+browser.driver.sleep(5000);
+
+});
+});
+
+
