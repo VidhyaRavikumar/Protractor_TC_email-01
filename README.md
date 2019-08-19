@@ -2,10 +2,10 @@
 
 ## Command to execute 
 
-Replace xxx with corresponding values before running the command
+Replace xxx and yyy with corresponding values before running the command
 
     protractor config.js \
     --params.login.email='xxx@gmail.com' \
-    --params.login.password='xxx' \
+    --params.login.password='yyy' \
     --params.login.sendtoemail='xxx@gmail.com' \
-    --params.login.cmsub='hello'
+    --params.login.cmsub='subject_test'
