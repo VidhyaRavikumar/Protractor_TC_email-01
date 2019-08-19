@@ -4,8 +4,16 @@ exports.config = {
     'browserName': 'chrome'
     },
   framework: 'jasmine',
-  specs: ['./specs/FirstSpec.js'],
+  specs: ['./specs/e*'],
   jasmineNodeOpts: {
-    defaultTimeoutInterval: 30000
-  }
+    defaultTimeoutInterval: 90000
+  },
+  params: {
+    login: {
+      email: 'default',
+      password: 'default',
+      sendtoemail: 'default',
+      cmsub: 'default'
+    }
+  },
 };
