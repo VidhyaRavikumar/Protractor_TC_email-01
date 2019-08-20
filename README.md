@@ -11,6 +11,8 @@
 
 1)Clone this repo and go to Protractor_TC_email-01 dir
 
+    git clone https://github.com/VidhyaRavikumar/Protractor_TC_email-01.git
+
 2)Replace xxx and yyy with corresponding values before running the command
 
     protractor config.js \
