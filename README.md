@@ -4,10 +4,10 @@
     npm install -g protractor
     webdriver-manager update
 
-## Start web driver
+## Start web driver.
     webdriver-manager start
 
-## Command to execute 
+## Command to execute. 
 
 1)Clone this repo and go to Protractor_TC_email-01 dir
 
